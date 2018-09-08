@@ -308,3 +308,39 @@ cars = pd.DataFrame(my_dict)
 
 # Print cars
 print(cars)
+
+# Dictionary to DataFrame (2)
+
+import pandas as pd
+
+# Build cars DataFrame
+names = ['United States', 'Australia', 'Japan', 'India', 'Russia', 'Morocco', 'Egypt']
+dr =  [True, False, False, False, True, True, True]
+cpc = [809, 731, 588, 18, 200, 70, 45]
+dict = { 'country':names, 'drives_right':dr, 'cars_per_cap':cpc }
+cars = pd.DataFrame(dict)
+print(cars)
+
+# Definition of row_labels
+row_labels = ['US', 'AUS', 'JAP', 'IN', 'RU', 'MOR', 'EG']
+
+# Specify row labels of cars
+cars.index = row_labels
+
+# Print cars again
+print(cars)
+
+# CSV to DataFrame (1)
+
+# Import pandas as pd
+# import pandas as pd <- already imported
+
+# Import the cars.csv data: cars
+# cars = pd.read_csv('cars.csv') <- commented out because I don't have access to the cars.csv file
+
+# Print out cars
+print(cars) # when the data frame is printed out, it's missing the row index and the first column is unnamed
+# moreover, the first column should have been the row labels
+# we can change that by revising the code on line 339 to:
+# cars = pd.read_csv('cars.csv', index_col=0)
+
