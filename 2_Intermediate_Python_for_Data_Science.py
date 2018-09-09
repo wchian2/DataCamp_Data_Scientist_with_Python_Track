@@ -592,3 +592,104 @@ else :
 
 # Print medium
 # print(medium)
+
+## 4 - Loops
+
+# Basic while loop
+# Initialize offset
+offset = 8
+
+# Code the while loop
+while offset != 0:
+    print("correcting...")
+    offset = offset -1
+    print(offset)
+
+# Add conditionals, e.g. what if offset were to be initialized as a negative number?
+
+# Initialize offset
+offset = -6
+
+# Code the while loop
+while offset != 0 :
+    print("correcting...")
+    if offset > 0:
+        offset = offset - 1
+    else:
+        offset = offset + 1
+    print(offset)
+
+# Loop over a list
+
+# areas list
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Code the for loop
+for area in areas:
+    print(area)
+
+# Indexes and values (1)
+
+# areas list
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Change for loop to use enumerate() and update print()
+for index + 1, area in enumerate(areas) :
+    print("room {index}: {area}".format(index=index+1, area=area)) # +1 to index to account for the zero-index system
+
+# Loop over list of lists
+
+# house list of lists
+house = [["hallway", 11.25],
+         ["kitchen", 18.0],
+         ["living room", 20.0],
+         ["bedroom", 10.75],
+         ["bathroom", 9.50]]
+
+# Build a for loop from scratch
+for room in house:
+    print("the {x} is {y} sqm".format(x=room[0], y=room[1]))
+
+# Loop over a dictionary
+
+# Definition of dictionary
+europe = {'spain': 'madrid', 'france': 'paris', 'germany': 'berlin',
+          'norway': 'oslo', 'italy': 'rome', 'poland': 'warsaw', 'austria': 'vienna'}
+
+# Iterate over europe
+for key, value in europe.items():
+    print("the capital of {x} is {y}".format(x=key, y=value))
+
+# Loop over Numpy array
+
+# Import numpy as np
+import numpy as np
+
+# For loop over np_height
+for height in np_height:
+    print(str(height) + " inches")
+
+# For loop over np_baseball
+for x in np.nditer(np_baseball):
+    print(x)
+
+# Loop over DataFrame (1)
+
+# Import cars data
+# import pandas as pd
+# cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Iterate over rows of cars
+# for lab, row in cars.iterrows():
+    # print(lab)
+    # print(row)
+    # print("{country}: {cars_per_cap}".format(country=lab, cars_per_cap=row["cars_per_cap"])) <- cleaner
+    # Add column (1)
+    # cars.loc[lab, "COUNTRY"] = row['country'].upper()
+
+# Add column (2)
+# instead of the for-loop above, the code below would accomplish the same task
+# cars["COUNTRY"] = cars["country"].apply(str.upper)
+
+# 5 - Case Study: Hacker Statistics
+
